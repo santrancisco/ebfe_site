@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 relativeurls = true
 theme = "tale"
+uglyurls = true
