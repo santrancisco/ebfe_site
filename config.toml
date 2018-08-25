@@ -1,8 +1,8 @@
 baseURL = ""
 languageCode = "en-us"
 title = "San blog"
-relativeurls = true
+uglyURLs = true
+relativeURLs = true
 theme = "hugo_theme_pickles"
-uglyurls = true
 PygmentsCodeFences = true
 PygmentsStyle = "native"
