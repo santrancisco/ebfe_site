@@ -10,9 +10,7 @@ Ok so the goal is to have CloudWatch event to trigger on every Console login and
 
 Here is top view of how it work:
 
-CloudTrail log the event
- --> CloudWatch Event Rule triggers
-    --> Triger Lambda function Subcribe to the SNS topic
+CloudTrail log the event --> CloudWatch Event Rule triggers --> Triger Lambda function to send Slack message
 
 While building this I ran into several noobies mistaks and problems:
 
