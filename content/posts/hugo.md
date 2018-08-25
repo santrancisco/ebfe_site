@@ -13,6 +13,7 @@ The project is really just 2 github projects, the [hugo version for ebfe blog](h
 How it works from end to end is simple:
 
 To update website content user will need to do the following: 
+
  - Clone the github repository of the blog
  - User create new content in ebfe_site using `hugo new posts/anewpost.md`
  - User push the commit to github
