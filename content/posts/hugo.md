@@ -4,7 +4,7 @@ date: 2018-08-25T17:41:53+10:00
 draft: false
 ---
 
-[Hugo](gohugo.io/hugo-nuo/) is a static site generator written in Go. I had a look at it in the past and really wanted to try out for future website projects. Today, while looking for any reasons to not study for my AWS exam, I thought of an idea (which is probably  not new anyway) to use Hugo together with a lambda function and build a small CI/CD pipeline to deliver site content from github straight to Cloudfront. 
+[Hugo](https://gohugo.io/) is a static site generator written in Go. I had a look at it in the past and really wanted to try out for future website projects. Today, while looking for any reasons to not study for my AWS exam, I thought of an idea (which is probably  not new anyway) to use Hugo together with a lambda function and build a small CI/CD pipeline to deliver site content from github straight to Cloudfront. 
 
 
 The project is really just 2 github projects, the [hugo version for ebfe blog](https://github.com/santrancisco/ebfe_site) and a [lambda function written in Go](https://github.com/santrancisco/hugotocloudfront), deployed with serverless framework.
