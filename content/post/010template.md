@@ -1,0 +1,114 @@
+---
+title: "010 template study note"
+date: 2018-08-25T22:14:55+10:00
+draft: false
+---
+
+Since I only touched 010 editor previously no more than the registration part after getting a fun reversing challenge from a friend, I thought i would install it today and actually have a go at creating a simple binary template for Faster Than Light save file. 
+
+I reversed some bit of the save file by looking at it and some from firing up the game, modify some attribute (buying weapons, killing some pirates, etc) and did a diff on the file. But this gets boring pretty quickly as I only wanna practice writting a 010 template. I came across a [Java app](https://github.com/Vhati/ftl-profile-editor/blob/9dda42166eb2fc681222944634053ee86bc8965f/src/main/java/net/blerf/ftl/parser/SavedGameParser.java) that would edit these save file written by someone else and translating this to 010 template editor was much quicker and easier. 
+
+There are a lot of repetitive tasks eventually so I have only done enough to change stuffs in the game and learn a few tricks in 010 template script.
+
+Below is example code if you wanna get into it 
+
+```language-c#
+//Declare a special String struct (having size first then the string itself.
+struct String{
+    int size; 
+    char value[size];
+};
+
+string readString( String &s ){
+    return s.value;
+}
+
+string readDifficulty( int diff )
+{
+ if( diff == 0 )
+     return "Easy";
+ else if (diff == 1 )
+     return "Normal";
+ else if (diff == 2 )
+     return "Hard";
+}
+
+int version;
+int setDLCEnabled;
+// This will change the vaue shows in the Value collumn for the difficulty rating to a string instead of boring number
+int diffFlag <read=readDifficulty>;
+int totalShipDefeated;
+int totalBeaconsExplored;
+int totalScrapCollected;
+int totalCrewHired;
+// This will highlight the ship name in purple 
+String shipName <bgcolor=cLtPurple>;
+String bluePrintId;
+int oneBasedSectorNumber;
+int unknow;
+int stateVarCount;
+
+//example declare a local variable which does not map to anything
+local int totalstateVar = stateVarCount;
+
+//declare StateVar struct
+struct StateVar {
+    String Id;
+    int    Value;
+};
+
+//another example to declare a local variable which does not map to anything, 
+//we will use this as counter for loop :)
+local int i;
+for( i = 0; i < stateVarCount; i++ ) {
+   StateVar state;
+};
+
+//declare StartingCrew struct
+struct StartingCrew{
+    String crewRace;
+    String crewName <read=readString>;
+};
+
+//declare Shipstate struct
+struct Shipstate{
+    String blueprintId;
+    String shipname <read=readString>;
+    String shipGfxBaseName;
+    int startingCrewCount;
+    for( i = 0; i < startingCrewCount; i++ ) {
+        StartingCrew startingcrew;
+    };  
+    int Hostile;
+    int JumpChargeTicks;
+    int Jumping;
+    int JumpAnimTicks;
+};
+Shipstate playership;
+
+int HullAmt;
+int FuelAmt;
+int DronePartsAmt;
+int MisslesAmt;
+int ScrapAmt;
+
+int crewCount;
+
+//declare CrewMember struct
+struct CrewMember{
+    String Name;
+    String Race;
+    int EnemyBoardingDrone;
+    int Health;
+    int SpriteX;
+    int SpriteY;
+    int RoomId;
+    int RoomSquare;
+    int PlayerControlled;
+    int CloneReady;
+    int deathOrder;
+};
+```
+
+Anyway, I would highly recommend going through the tutorial of 010 first then try parsing FTL save file to ease your way into learning 010 template script as it is useful and more fun! ;)
+
