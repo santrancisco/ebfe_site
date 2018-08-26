@@ -179,5 +179,14 @@ func main() {
 }
 ```
 
+ ## Ideas
+
+We can potentially extend the functionality of this simple lambda function to do the following:
+
+  - Having lambda function to get user's email or slack account either through IAM or look up table and notify them when there is a successful login.
+  - The above notification can embed a link that when clicked will notify administrator of the unauthorised access and temporary disable the account - This can be done with another higher privilege lambda function - The earlier function can generate a signed message with short time to live. This message can be consumed and validate by 2nd lambda function and pull neccessary information to :
+    - Send notification to Administrator
+	- Temporary disable the account through IAM
+
 
 That's it, enjoy!
