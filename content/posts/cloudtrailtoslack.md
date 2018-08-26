@@ -6,6 +6,10 @@ draft: false
 
 Another side track during my study for AWS cert! :) This time it is all about slacking off and write some lambda!
 
+Without further ado, this is an example screenshot of what you would expect after setting this up:
+
+![cloudwatchtoslack](/static/cloudwatchtoslack.png)
+
 Ok so the goal is to have CloudWatch event to trigger on every Console login and eventually send that information of login attempt to Slack for monitoring.
 
 Here is top view of how it work:
