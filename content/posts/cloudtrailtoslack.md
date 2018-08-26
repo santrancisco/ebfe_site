@@ -179,7 +179,7 @@ func main() {
 }
 ```
 
- ## Ideas
+ ### Ideas ###
 
 We can potentially extend the functionality of this simple lambda function to do the following:
 
