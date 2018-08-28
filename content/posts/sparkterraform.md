@@ -38,7 +38,7 @@ security_groups_ids = ["${module.core_network.allip_egress_security_group_id}",]
 
 ```
 
-Here is how it works behind the scene:
+Here is how it all works behind the scene:
 
 Resources:
 - 1 x Security groups to allow all spark nodes talk to each other
@@ -71,5 +71,6 @@ Slave node Autoscaling group:
 - Write User's private key to file. This is passed to the module as a variable.
 - Use ssh-keygen to get back public key from the private key and write it to ~/.ssh/authorize
 - Start slave node script with the following argument "start-slave.sh Master.{deployment_name}-spark:7077" (This is the reason why we have Route53, if we used the aws_instance.private_ip we run into a catch 22 where ASG needs access to private IP/hostname of the Master node and the Master node need to know the name of the ASG once it is created.)
+
 
 __Conclusion:__ Though this module definitely requires more work, for example, there is that problem of having private keys used by master&slave nodes to SSH into each other being stored in clear text in the user-data of each box for now, this implementation addressed the most important thing i wanted which is having as little amount of tool to manage our infrastructure so things won't break in unexpected way.
