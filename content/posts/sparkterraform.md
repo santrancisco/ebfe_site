@@ -14,7 +14,7 @@ And that is where this Spark Terraform module comes in. You can find it here: [h
 
 This module is written to simply deploy an EC2 instant as the spark Master node and the rest of the slave nodes are spot instances to save money (just like flintrock). Note that this deployment is a spark standalone deployment and does not include hadoop or yarn.
 
-Here is an example of how you would deploy this spark cluster code in production:
+Here is an example of how you would deploy a spark cluster using this module:
 
 ```
 
