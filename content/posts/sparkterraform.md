@@ -1,7 +1,7 @@
 ---
 title: "Terraforming Spark cluster in AWS"
 date: 2018-08-28T04:24:37+10:00
-draft: true
+draft: false
 ---
 
 Recently we needed Spark for our semi-"bigdata" project at work, upon looking online for how to set up a cluster or spark nodes, our team came across flintrock which is told by many enthusiasts that it is the easiest way to get Spark running in AWS with minimal effort.
