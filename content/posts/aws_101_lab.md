@@ -4,7 +4,7 @@ date: 2018-08-24T20:14:55+10:00
 draft: false
 ---
 
-This lab is kinda like a Helloworld for AWS networking. It walks you through creating a VPC from ground up and walk you through why things arent working (yet).
+This lab is kinda like a Helloworld for AWS networking I built when I first did my Associate exam so i will share it here. It walks you through creating a VPC from ground up and walk you through why things arent working (yet).
 
 ### Intro ###
 
