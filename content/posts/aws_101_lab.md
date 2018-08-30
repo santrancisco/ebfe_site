@@ -23,7 +23,8 @@ __NOTE:__ Interesting facts or reminder will be in here
 - __[x]__ Create a VPC
 - __[x]__ Create 2 subnets, one for private and another for public
 - __[x]__ For public subnet, Use `Modify auto-assign IP settings` to enable auto-assign public IPv4
-#### Provision ###
+
+### Provision ###
 
 Let's create 2 ec2 instances now
 
@@ -38,7 +39,7 @@ __NO__! Every new VPC cannot talk to the internet. We need an `Internet gateway`
 
  - __[x]__ Create a new Internet gateway and attach it to right VPC
 
-#### Routing ###
+### Routing ###
 
 _Does ssh to ec2 in public subnet work now?_
 
@@ -56,7 +57,8 @@ _Does `curl http://google.com` works on the public EC2 ?_
 
 __YES__! The Security Group we created during Provision section above, by default (and you can't change this at creation due to GUI limitation but can edit later), will allow all outbound traffic!
 
-#### Security Group ###
+### Security Group ###
+
 You can skip this or `apt-get install apache2` to play with this
 
 _Does http traffic work now if you have apache runs on the public box?_
@@ -73,7 +75,7 @@ _Can we access port 80 & 443 now?_
 __YES__! 👍
 
 
-#### NAT GATEWAY ###
+### NAT Gateway ###
 
 - __[x]__ ssh to Private EC2 from Public EC2
 
@@ -106,7 +108,7 @@ __YES__!
 
 
 
-#### Super secret network ####
+### Super secret network ###
 
 __This is the extra stuff I worked on to prepare for the Security Specialist exam.__
 
@@ -185,7 +187,7 @@ _Can we ssh out to other machines from our super private subnet instance?_
 __NO__! There is no rules combination that would allow this to work. There is potentially of inbound rule 200 and outbound rule 200 to make this work but for that, a customed SSH client is required to FORCE the source port from the super private instance to also be 22 ? 🤷‍♂️
 
 
-#### Thoughts ###
+### Thoughts ###
 
 Now we know that route table `main` is a catch all for all subnets, perhaps, it should be left alone and never be used. That way, every new subnet being created, it won't be connected to the internet immediately until specified which route table it should be associate with.
 
