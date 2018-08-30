@@ -1,6 +1,6 @@
 ---
 title: "AWS 101 Network lab"
-date: 2018-02-25T16:15:45+10:00
+date: 2018-08-24T20:14:55+10:00
 draft: false
 ---
 
