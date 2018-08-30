@@ -47,6 +47,8 @@ __NO__! The internet gateway is attached to the VPC but the route table has not 
  
   - Add `0.0.0.0/0 to Internet gateway` route to the main routetable, created by default when VPC is created.
   
+__NOTE__: DO NOT do this in your actualy work environment, See the Thoughts section below for further explanation after you finish the lab.
+  
 _Does ssh to ec2 in public subnet work now?_
 
 __YES__! VPC has Internet gateway to reach out, our default internet route is in place, our default security group on the EC2 instances are allowing us IN!
