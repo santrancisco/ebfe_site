@@ -33,7 +33,7 @@ Let's create 2 ec2 instances now
    - When prompted, create a new security group or just use the default which allow port __22__ to access from any ip.
  - 1 in private subnet
 
-_Can we ssh to ec2 in public subnet to these new box?_
+_Can we ssh to the ec2 in public subnet which has public ip assigned to it yet?_
 
 __NO__! Every new VPC cannot talk to the internet. We need an `Internet gateway` attach to it
 
