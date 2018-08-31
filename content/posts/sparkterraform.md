@@ -75,4 +75,8 @@ Slave node Autoscaling group:
 - Start slave node script with the following argument "start-slave.sh Master.{deployment_name}-spark:7077" (This is the reason why we have Route53, if we used the aws_instance.private_ip we run into a catch 22 where ASG needs access to private IP/hostname of the Master node and the Master node need to know the name of the ASG once it is created.)
 
 
+__TODO__: We need a better way to store the private keys used by master node to ssh to all slave nodes for executing tasks. I thought of multiple ways of doing this:
+ - Add a KMS-C (Customer-Provided Encryption Key) to the role and have a bucket s3 bucket that encrypt/decrypt data using this key but there is addional cost. (1$ a month)
+ - Using Parameter store in AWS Systems Manager (SSM) - This is secure way to store key-value pair and it is encrypted with KMS. We can have role to read this value. This is much better.
+
 __Conclusion:__ Though this module definitely requires more work, for example, there is that problem of having private keys used by master&slave nodes to SSH into each other being stored in clear text in the user-data of each box for now, this implementation addressed the most important thing i wanted which is having as little amount of tool to manage our infrastructure so things won't break in unexpected way.
