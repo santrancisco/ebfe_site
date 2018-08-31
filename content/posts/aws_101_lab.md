@@ -190,10 +190,10 @@ __NO__! There is no rules combination that would allow this to work. There is po
 
 Now we need to clean up the environment so it wont bill us anymore. Many people forget that NAT Gateway actually cost money to run and they only terminate instances.
 
- - Terminate all EC2 instances
- - Delete NAT Gateway
- - Dettach & Delete the Internet Gateway after Deletion of NAT Gateway completes
- - Delete the VPC - This will delete all other resources associate with it as well.
+ - __[x]__ Terminate all EC2 instances
+ - __[x]__ Delete NAT Gateway
+ - __[x]__ Dettach & Delete the Internet Gateway after Deletion of NAT Gateway completes
+ - __[x]__ Delete the VPC - This will delete all other resources associate with it as well.
 
 ### Thoughts ###
 
