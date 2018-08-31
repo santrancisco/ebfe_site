@@ -14,6 +14,8 @@ And that is where this Spark Terraform module comes in. You can find it here: [h
 
 This module is written to simply deploy an EC2 instant as the spark Master node and the rest of the slave nodes are spot instances to save money (just like flintrock). Note that this deployment is a spark standalone deployment and does not include hadoop or yarn.
 
+By default, the autoscaling group will check for moments of average CPU Utilization hits more than 85% to scale up (2 instances at a time) and moments of average CPU Utilization drops below 20% to scale down (also 2 at a time).
+
 Here is an example of how you would deploy a spark cluster using this module:
 
 ```
