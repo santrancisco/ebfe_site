@@ -186,6 +186,14 @@ _Can we ssh out to other machines from our super private subnet instance?_
 
 __NO__! There is no rules combination that would allow this to work. There is potentially of inbound rule 200 and outbound rule 200 to make this work but for that, a customed SSH client is required to FORCE the source port from the super private instance to also be 22 ? 🤷‍♂️
 
+### Clean Up ###
+
+Now we need to clean up the environment so it wont bill us anymore. Many people forget that NAT Gateway actually cost money to run and they only terminate instances.
+
+ - Terminate all EC2 instances
+ - Delete NAT Gateway
+ - Dettach & Delete the Internet Gateway after Deletion of NAT Gateway completes
+ - Delete the VPC - This will delete all other resources associate with it as well.
 
 ### Thoughts ###
 
