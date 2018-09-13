@@ -8,7 +8,7 @@ __JUST A KEYBOARD?__
 
 For a long time now I have always wanted a keyboard that does not require any special software/driver being installed into PC/Mac but has all the cool programmable macro in its firmware that I could modify. Then I discovered [qmk](https://github.com/qmk/qmk_firmware) 2 months ago! 😱
 
-After doing some researchs, mostly looking through [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards), i decided to take the leap and bought a Tada68 (also called [Saber68](https://www.originativeco.com/) ). Originally I was almost convinced to build my own with a Teensy microcontroller but the amount of time+effort to build the keyboard is absurb and I'm sure i could use that time better elsewhere given that now have 2 kids to look after.🤷‍♂️  
+After doing some researches, mostly looking through [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards), i decided to take the leap and bought a Tada68 (also called [Saber68](https://www.originativeco.com/) ). Originally I was almost convinced to build my own with a Teensy microcontroller but the amount of time+effort to build the keyboard is absurb and I'm sure i could use that time better elsewhere given that now have 2 kids to look after.🤷‍♂️  
 
 And here it is in all its glory:
 
