@@ -27,6 +27,7 @@ The modifications from the default keymap are:
  - Swapped the left ALT and Win key - similar to MAC
 
 Useful Key sequence modification:
+
  - (LeftShift + ESC) -> `~`   (Useful for using terminal due to my habit to reference $HOME)
  - (Alt + ESC)       -> `` ` ``  (Not great but it's better than reaching for backtick all the way to right corner)
  - (FN  + ESC)       -> `` ` ``  (Same as above, just another alternative to get a backtick)
