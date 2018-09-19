@@ -1,8 +1,20 @@
 baseURL = ""
 languageCode = "en-us"
-title = "San blog"
+title = "EBFE (JMP -2)"
 uglyURLs = true
 relativeURLs = true
 theme = "hugo_theme_pickles"
 PygmentsCodeFences = true
 PygmentsStyle = "native"
+
+[params]
+  paginate = 5
+  linkedin = "santrancisco"
+  github = "santrancisco"
+  avatar = "/static/ebfe.png"
+  author = "San Tran"
+  bio = "Father of 2 awesome kids"
+  subtitle="{Passion : ['Security','Devops'],Love : ['Electronic', 'Space','Science shitz', 'moonshot ideas','Family']}"
+  logo = "/static/ebfe.png"
+  favicon = "/static/ebfe.ico"
+
