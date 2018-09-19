@@ -6,7 +6,7 @@ draft: false
 
 Occasionally I need to bypass some dodgy filter to perform Server Side Request Forgery (SSRF). This could be useful in these instances. Example below is how you may be able to use this trick to bypass filters for the "magic cloud url" to get metadata of the server. Try `curl http://2852039166/latest` on an ec2 instance and see for yourself.
 
-
+Note: For a more elaborate tool, [XIP](https://github.com/immunIT/XIP) can do a lot more transformations.
 
 
 <form name="base">
