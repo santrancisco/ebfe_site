@@ -11,6 +11,7 @@ PygmentsStyle = "native"
   paginate = 5
   linkedin = "santrancisco"
   github = "santrancisco"
+  disqus = "ebfepw"
   avatar = "/static/ebfe.png"
   author = "San Tran"
   bio = "Father of 2 awesome kids"
