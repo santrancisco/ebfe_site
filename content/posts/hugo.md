@@ -1,8 +1,16 @@
 ---
-title: "Hugo blog from Git to Cloudfront"
-date: 2018-08-25T17:41:53+10:00
+title: "Hugo blog from Git to Cloudfront [UPDATE]"
+date: 2018-10-13T17:41:53+10:00
 draft: false
 ---
+
+## UPDATE ##
+
+The serverless code i [wrote](https://github.com/santrancisco/hugotocloudfront) now deploys the S3 bucket as well as the Cloudfront distribution. Unfortunately there wasnt an obvious/easy way to have a private role/OriginAccessIdentity configure in serverless.yml so at the moment the s3 bucket is publicly READ-able and cloudfront CDN pull info from the bucket by visiting <bucketname>.s3.amazonaws.com at the moment. 
+
+Also, the free AWS certificate that can be used with Cloudfront is being verified (using DNS) and created manually.
+
+--------------------
 
 [Hugo](https://gohugo.io/) is a static site generator written in Go. I had a look at it in the past and really wanted to try out for future website projects. Today, while looking for any reasons to not study for my AWS exam, I thought of an idea (which is probably  not new anyway) to use Hugo together with a lambda function and build a small CI/CD pipeline to deliver site content from github straight to Cloudfront. 
 
