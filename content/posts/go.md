@@ -1,6 +1,6 @@
 ---
 title: "Learning Go again in 2019"
-date: 2019-02-06T22:58:33+11:00
+date: 2019-02-05T20:58:33+11:00
 draft: false
 ---
 
