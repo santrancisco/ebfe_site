@@ -84,7 +84,8 @@ Some of the thing that could affect your lambda:
  - Timeout for lambda function, by default, is set to 3 seconds which could be too short for your application. This value can be increase up to 15 minutes
  - Lambda function retry behavior is something to take note of as this could cause lambda function become noisy with error retries https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html 
  - The IAM Execution Role used by lambda function should always include the following to let lambda function to assume the role and create logs
- ```
+
+```
  {
   "Version": "2012-10-17",
   "Statement": [
@@ -106,6 +107,6 @@ Some of the thing that could affect your lambda:
     }
   ]
 }
- ```
+```
 
 
