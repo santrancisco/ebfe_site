@@ -22,6 +22,7 @@ In true devops/infra coder style, i decided to run the [facebook ctf platform ](
 
 
 So 4 days before the ctf, i finally got my version of fbctf docker image push to docker hub + a terraform code to do the hard work :
+
  - Create VPC, private & public subnets + internet gateway + security groups 
  - A Mysql database to store the game progress
  - An ALB and target group for the ECS service
