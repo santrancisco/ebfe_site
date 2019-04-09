@@ -6,7 +6,9 @@ draft: false
 
 ### UPDATE - automatically save to google drive
 
-Update: So the amount os password list i got is quite a lot and the uploader or pastebin keeps deleting them after a few hours/days. I don't really look at these files but wanted to collect them for future reference (eg building a password list or if i wanna send messages to people who are affected out of good will), so i rewrite the appscript a little to fetch the file and save it to google drive. This is now working pretty nicely and i can check my google drive every now and then for a freshly download password list.
+Update: So I recently found that some of my alerts are quite good at catching password list and i often get 2 or 3 a day and the uploader or pastebin keeps deleting them after a few hours/days. I don't really look at these files but wanted to collect them for future reference (eg building a password list, building a similar service like haveibeenpwn but more instantaneous eg sending emails to users who are affected out of good will), so i rewrite the appscript a little to fetch the file and save it to google drive. This is now working pretty nicely and i can check my google drive every now and then for a freshly download password list.
+
+Hmmm To be honest, It wouldnt be very hard to parse the file and perform simple regex to get the list of email and we can add all of those affected users into a bcc field of email and send it out .... That's tempting !!!
 
 
 Recently I decided to sign up to pastebin pro. Since pastebin pro only notifies you via email, it is quite inconvenient so I decided to look around for a solution that would let us ship these alerts to Slack.
