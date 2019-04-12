@@ -8,7 +8,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "native"
 
 [params]
-  paginate = 5
+  paginate = 10
   linkedin = "santrancisco"
   github = "santrancisco"
   disqus = "ebfepw"
@@ -17,5 +17,7 @@ PygmentsStyle = "native"
   bio = "Father of 2 awesome kids"
   subtitle="{Passion : ['Security','Devops'],Love : ['Electronic', 'Space','Science shitz', 'moonshot ideas','Family']}"
   logo = "/static/ebfe.png"
+  # Google Analytics API key.
+  ga_api_key = "UA-138219541-1"
   favicon = "/static/ebfe.ico"
 
