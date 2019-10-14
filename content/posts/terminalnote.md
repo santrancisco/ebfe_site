@@ -57,7 +57,7 @@ function tnote() {
 
 ```
 
-Here is the image of what it looks like when it runs
+Here is the image of what it looks like when it runs. You have a choice between using one of the last 20 command, type in a new one or use existing one in clipboard. I even try with a whole bashscript in clipboard and it worked really well  :) 
 
 ![terminal note](/static/terminalnote.png)
 
@@ -65,10 +65,29 @@ __Static site generator__
 
 So i don't have much time to muck around with this and thus i just write this dirty bash script to basically convert all markdown inside `contents` subfolder to a terminal colored file inside a `public` folder while retaining folder structure. The script also generates a simple index.html for simple listing of available cheatsheets. The public folder could then be hosted onto any webserver and available for user to `curl` and get the cheats. Obviously these files when viewed in browser will not look nice but that is beyond the point here.
 
+The folder structure should be:
+
+```
+
+runme.sh
+```
+
 
 ```bash
 #!/bin/bash
+##Folder structure should be:
+## ____runme.sh
+##  |__./contents/hello.md
+##  |__./contents/linux/vim.md
+##  |__./contents/python/asyncio.md
+##  |__./public
 
+## After the code run, we will get public folder look like this:
+##  |__./public/index.html
+##  |__./public/hello
+##  |__./public/linux/vim
+##  |__./pugblic/python/asyncio
+##
 ## This is a good template for a bash script with multiple tasks
 
 which consolemd &> /dev/null
