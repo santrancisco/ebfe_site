@@ -67,11 +67,6 @@ So i don't have much time to muck around with this and thus i just write this di
 
 The folder structure should be:
 
-```
-
-runme.sh
-```
-
 
 ```bash
 #!/bin/bash
