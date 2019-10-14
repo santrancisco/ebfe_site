@@ -15,8 +15,8 @@ So i wrote a simple script today to help myself taking notes of commands i run w
 The script is simple and shown below.
 
 ```bash
-export NOTE="$HOME/terminalnotes.md"
 
+export NOTE="$HOME/terminalnotes.md"
 function tnote() {
     HISTORY_ENTRIES=`history | tail -n 20`
     echo "Last few entries in your history are:"
@@ -27,21 +27,21 @@ function tnote() {
     echo ""
     exec 3<>/dev/tty
     while true; do
-        read -u 3 -p "Choose command (purple above): " choice
-        cmd=""
+	read -u 3 -p "Choose command (purple above): " choice
+	cmd=""
         if $(echo "$HISTORY_ENTRIES" | grep -q "$choice"); then
            cmd=$(echo "$HISTORY_ENTRIES" | grep "$choice" | sed -e "s/ *[0-9]* *//")
-        fi
+	fi
+	
+	if [ "$choice" == "new" ]; then
+	   read -u 3 -p "Enter custom command: " cmd
+	fi
+	if [ "$choice" == "clip" ]; then
+	   cmd=`xclip -selection clipboard -o`
+	fi
 
-        if [ "$choice" == "new" ]; then
-           read -u 3 -p "Enter custom command: " cmd
-        fi
-        if [ "$choice" == "clip" ]; then
-           cmd=`xclip -selection clipboard -o`
-        fi
-
-        if [ "$cmd" != "" ]; then
-            echo -e "\nYou picked: $cblue$cmd$creset"
+	if [ "$cmd" != "" ]; then
+            echo -e "\nYou picked: \033[0;34m$cmd\033[0m"
             read -u 3 -p "Enter descriptions: " desc
             echo -e "\n$desc\n" >> $NOTE
             echo '```' >> $NOTE
