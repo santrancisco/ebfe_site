@@ -52,7 +52,7 @@ mv cert.crt <hash>.0
 
 Finally, we copy the certificate over to `/system/etc/security/cacerts` by pushing it over adb, escalate to root, remount `/` and move the cert file.
 
-```
+```bash
 adb push <hash>.0
 adb shell
 su 
