@@ -61,3 +61,6 @@ mv /<hash>.0 /system/etc/security/cacerts
 ```
 
 Run `adb reboot` or restart the phone and check the system certificate store to make sure our new cert is installed. 
+
+Also, do check out my [mosec - mobile security vagrant](https://github.com/santrancisco/mosec), packed with tools for reversing android :) 
+
