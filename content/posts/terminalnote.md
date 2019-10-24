@@ -8,6 +8,11 @@ __TIRED OF FOGGY BRAIN__
 
 I always have trouble with recalling what command i ran in the past, constantly looking up for simple trick in bash so i have always wanted to build something similar to [cheat.sh](http://cheat.sh/) for myself. Except cheat.sh runs on a python flask server and i really think it is bloated/overengineered for what it does. All i want is a simple static site generator to convert markdown notes to colored console output. 
 
+This is an example of what my final product looks like:
+
+![finalnote](/static/terminalnotefinal.png)
+
+
 __FUN .bashrc trick__
 
 So i wrote a simple script today to help myself taking notes of commands i run while i use bash. It's only a few lines and all it does is taking the command you ran with some description and shove it into a terminalnote.md file in your home folder. I will then move these notes later when i have time to specific markdown file/folder.'
@@ -63,9 +68,7 @@ Here is the image of what it looks like when it runs. You have a choice between 
 
 __Static site generator__
 
-So i don't have much time to muck around with this and thus i just write this dirty bash script to basically convert all markdown inside `contents` subfolder to a terminal colored file inside a `public` folder while retaining folder structure. The script also generates a simple index.html for simple listing of available cheatsheets. The public folder could then be hosted onto any webserver and available for user to `curl` and get the cheats. Obviously these files when viewed in browser will not look nice but that is beyond the point here.
-
-The folder structure should be:
+So i don't have much time to muck around with this and thus i just put together this bash script to basically convert all markdown inside `contents` subfolder to a terminal colored file inside a `public` folder while retaining folder structure. The script also generates a simple index.html for simple listing of available cheatsheets. The public folder could then be hosted onto any webserver and available for user to `curl` and get the cheats. Obviously these files when viewed in browser will not look nice but that is beyond the point here.
 
 
 ```bash
@@ -106,9 +109,13 @@ function cleanup {
     echo "Fin."
     #echo "[+] cleanup code was called"
 }
+
+WORKINGDIR=$0
 PUBLICFOLDER='public'
+SURGEDOMAIN='sancheatsheets.surge.sh'
 
 function convertdoc {
+    echo "[+] Convert all notes"
     FILENAME=$1
     BASENAME=`basename $FILENAME .md`
     DIRNAME=`dirname $FILENAME`
@@ -131,9 +138,22 @@ function gendoc {
     if [ -z "${FILES:-}" ]; then
         find ./ -name '*.md' -exec bash -c "PUBLICFOLDER=$PUBLICFOLDER convertdoc {}" \;
     fi
-    exit 0
+    cd ..
 }
 
+function pushtosurge {
+    echo "[+] Pushing to surge"
+    surge $PUBLICFOLDER -d $SURGEDOMAIN
+}
+
+function build {
+    if [ -d "$PUBLICFOLDER" ]; then
+        rm -rIv $PUBLICFOLDER
+    fi
+    mkdir -p $PUBLICFOLDER
+    gendoc
+    pushtosurge
+}
 
 function help {
    echo "$0 <task> <args>"
@@ -151,6 +171,7 @@ ${@:-help}
 
 
 To try it out, you can run `curl https://sancheatsheets.surge.sh` (This is not where i host my official cheatsheets). This is a playground markdown i was messing with to see what the output will look like in the terminal.
+
 
 __WHAT'S NEXT?__
 
