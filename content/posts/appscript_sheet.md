@@ -10,7 +10,6 @@ Sometimes you have boring task such as scrolling through thousand lines of csv l
 Obviously the code can be expanded easily to do something fun like replace the content of a markdown template by injecting cell values so you could copy and throw it into markdown-supported system.
 
 This is example of what it looks like in action:
-
 ![sheetmenu](/static/sheetmenu.png)
 
 And the modal itself with information in it from diffrent rows:
