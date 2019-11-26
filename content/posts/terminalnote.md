@@ -170,7 +170,7 @@ ${@:-help}
 ```
 
 
-To try it out, you can run `curl https://sancheatsheets.surge.sh` (This is not where i host my official cheatsheets). This is a playground markdown i was messing with to see what the output will look like in the terminal.
+To try it out, you can run `curl http://sancheatsheet.surge.sh` (This is no longer where i host my own cheatsheets but just an example). This is a playground markdown i was messing with to see what the output will look like in the terminal.
 
 
 __WHAT'S NEXT?__
