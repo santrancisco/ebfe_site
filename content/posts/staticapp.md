@@ -24,9 +24,12 @@ QRCode generator using js library https://ebfe.pw/shared/qr.html
 
 My phishing page to show case IDN homograph attack: [https://cornmbank.com/](https://cornmbank.com/), it used to get internal ip ranges using webrtc but that seems to be broken nowand it uses a nice trick at the bottom to determine what social network you are logging into.
 
-Open blank-Changing parent tab (click it and see) <-- does what it says:
-<a href="https://ebfe.pw/shared/changeparent.html" target="_blank">https://ebfe.pw/shared/changeparent.html</a>
+Open blank-Changing parent tab <-- does what it says:
+[https://ebfe.pw/shared/changeparent.html](https://ebfe.pw/shared/changeparent.html)
 
+```
+<a href="https://ebfe.pw/shared/changeparent.html" target="_blank">https://ebfe.pw/shared/changeparent.html</a>
+```
 
 CSRF test page generates a csrf form submit page base off your "copy as curl command" from burp. Although under engagementtool you do have a generate cfrf PoC page anyway. :p Oh well, whateva [https://ebfe.pw/shared/csrfpage.html](https://ebfe.pw/shared/csrfpage.html)
 
