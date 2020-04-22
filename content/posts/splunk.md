@@ -1,6 +1,6 @@
 ---
 title: "Splunk trick"
-date: 2019-10-14T11:57:12+10:00
+date: 2019-12-14T11:57:12+10:00
 draft: false
 ---
 
