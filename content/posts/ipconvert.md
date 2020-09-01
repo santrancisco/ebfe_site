@@ -1,10 +1,12 @@
 ---
 title: "IP conversion tricks"
-date: 2018-09-19T15:26:28+10:00
+date: 2020-04-30T15:26:28+10:00
 draft: false
 ---
 
 Occasionally I need to bypass some dodgy filter to perform Server Side Request Forgery (SSRF). This could be useful in these instances. Example below is how you may be able to use this trick to bypass filters for the "magic cloud url" to get metadata of the server. Try `curl http://2852039166/latest` on an ec2 instance and see for yourself.
+
+And yes, in case you have not tried, you can even mix them up and shorten it by ignore 0, eg try `ping 192.0x2a.012` will ping 191.42.0.10 ip address :)
 
 Note: For a more elaborate tool, [XIP](https://github.com/immunIT/XIP) can do a lot more transformations.
 
@@ -158,3 +160,27 @@ function evalDotHex(item) {
 }
 evalDot(base.dotd)
 </script>
+
+
+__April 2020 Update__: Thought i would quickly update this post since i have been dealing with a few SSRF issues :)
+
+
+Another things to consider: Protocol smuggling
+
+An interesting endpoint for aws beside metadata endpoint is [lambda runtime](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html). Usually at http://127.0.0.1:9001/2018-06-01/runtime/invocation/next
+
+Other potential bypasses: 
+  - Simple A record
+  - A record with multiple ip addresses listed
+  - IPV6
+  - 3xx redirect
+  - DNSRebinding
+  - With the rise of chromeheadless, we can now try redirecting it using meta-refresh or javascript
+
+```
+<meta http-equiv="refresh" content="0;url=http://169.254.169.254/latest" />
+<script>
+  window.location.replace("http://169.254.169.254");
+</script>
+```
+  - With chromeheadless we can also mess with URL like `http://example.com@169.254.169.254/latest/
