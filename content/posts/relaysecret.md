@@ -10,7 +10,7 @@ Firefox send project was recently suspended due to malware abused. This sucks bi
 
 I then spent that night looking into writing a terraform code to deploy firefox send in AWS... There were quite a few pieces.. a server or container running the nodejs server, a redis queue and s3 bucket for storage ... Since i also want to run it for personal use, i could not justify the redis queue cost and the whole complex nodejs backend make management a pain.
 
-Fast forward to earlier this week, i had some free time and decided to build something by myself and thus [relaysecret](https://www.relaysecret.com/) was born. You can find the code [here](https://github.com/santrancisco/relaysecret)
+Fast forward to earlier this week, i had some free time and decided to build something by myself and thus [relaysecret](https://www.relaysecret.com/) was born. You can find the code [here](https://github.com/santrancisco/relaysecret).
 
 
 ## Requirements
@@ -38,7 +38,9 @@ S3 is cheap for storage and everything is done straight to our private S3 bucket
 
 ## Frontend code = HTML + Dropin CSS + Vanilla JS.
 
-Everyone is using vuejs, reactjs etc. Personally, i don't like complicating things. I knew this frontend would be dead simple and I wanted something that could be audited easily with minimum effort. I came across [this](https://github.com/meixler/web-browser-based-file-encryption-decryption/blob/master/web-browser-based-file-encryption-decryption.html) project and it was exactly what i needed. After some tweaking to wire it up to our backend code as well as trying out some [drop-in css](https://github.com/dohliam/dropin-minimal-css) to make it pretty.. I'm quite happy with the result.
+Everyone is using vuejs, reactjs etc. Personally, i don't like complicating things. I knew this frontend would be dead simple and I wanted something that could be audited easily with minimum effort. I came across [this](https://github.com/meixler/web-browser-based-file-encryption-decryption/blob/master/web-browser-based-file-encryption-decryption.html) project and it was exactly what i needed. After some tweaking to wire it up to our backend code as well as trying out some [drop-in css](https://github.com/dohliam/dropin-minimal-css) to make it pretty.. I'm quite happy with the result.  Below is the screenshot of the app.
+
+![relaysecret](/static/relaysecret.png)
 
 ## Deployment code
 
@@ -46,4 +48,4 @@ The deployment code was very simple to write in terraform. A lambda with API Gat
 
 ## Conclusion
 
-It was a fun little project and I'm glad i get to learn a few tricks with S3 bucket. 
+It was a fun little project and I'm glad i get to learn a few tricks with S3 bucket.
