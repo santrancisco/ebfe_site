@@ -171,6 +171,7 @@ An interesting endpoint for aws beside metadata endpoint is [lambda runtime](htt
 
 Other potential bypasses: 
   - Simple A record
+  - Openredirect of the current site incase there is a whitelist on the input domain ( some common params: uri;langTo;Page;redirect;next;redirecUrl)
   - A record with multiple ip addresses listed
   - IPV6
   - 3xx redirect
@@ -184,3 +185,4 @@ Other potential bypasses:
 </script>
 ```
   - With chromeheadless we can also mess with URL like `http://example.com@169.254.169.254/latest/
+

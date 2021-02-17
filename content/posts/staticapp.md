@@ -1,6 +1,6 @@
 ---
 title: "Useful static apps! (Updated)"
-date: 2020-04-21T20:15:45+10:00
+date: 2020-08-01T20:15:45+10:00
 draft: false
 ---
 
