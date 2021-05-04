@@ -4,14 +4,17 @@ Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
 
+# Google Analytics API key.
+googleAnalytics = "Your Google Analytics tracking id"
+
 [params]
   paginate = 10
+  custom_css = ["/css/custom.css"]
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "Your Twitter username"
   facebook = "Your Facebook username"
   instagram = "Your Instagram username"
-  googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
   github = "Your GitHub username"
   gitlab = "Your GitLab username"
   npm = "Your npm username"
@@ -24,10 +27,10 @@ copyright = "&copy; Copyright notice"
   vimeo = "Your Vimeo username"
   youtube = "Your YouTube username"
   linkedin = "Your LinkedIn username"
+  medium = "Your Medium username"
+  strava = "Your Strava userid"
   # Disqus shortname
   disqus = ""
-  # Google Analytics API key.
-  ga_api_key = "Your Google Analytics tracking id"
   author = "Your Name"
   authorwebsite = "example.com"
   avatar = "/path/to/avatar"

@@ -47,7 +47,6 @@ while IFS= read -r line ; do
     fi 
 done < .newfiles.tmp
 
-
 echo "[+] Deleting files that does not exist locally"
 
 while IFS= read -r line ; do 

@@ -7,7 +7,7 @@ draft: false
 This tool was hosted at [https://cidr.surge.sh](https://cidr.surge.sh) in the past. It is simple tool i modified from Michel MARIANI's [code](http://www.tonton-pixel.com/). The extra functionality allows me to workout the arguments i need for cidrsubnet function while writting terraform. This function will interpolate the calculated ip range you configure at runtime.
 
 ------------------
-
+{{< rawhtml >}}
 <div id="post-9581" class="post-9581 page type-page status-publish hentry">
 
     <h2><span id="cidr-to-ip-range">CIDR to IP Range</span></h2>
@@ -256,3 +256,5 @@ function getCidrList() {
     $('cidrListOutput').value = cidrs ? cidrs.join('\n') : "";
 }
 </script>
+
+{{< /rawhtml >}}

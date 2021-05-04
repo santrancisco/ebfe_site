@@ -1,8 +1,7 @@
-baseURL = ""
+baseURL = "/"
 languageCode = "en-us"
 title = "EBFE (JMP -2)"
 uglyURLs = true
-relativeURLs = true
 theme = "hugo_theme_pickles"
 PygmentsCodeFences = true
 PygmentsStyle = "native"
@@ -21,3 +20,7 @@ PygmentsStyle = "native"
   ga_api_key = "UA-138219541-1"
   favicon = "/static/ebfe.ico"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -10,7 +10,7 @@ And yes, in case you have not tried, you can even mix them up and shorten it by 
 
 Note: For a more elaborate tool, [XIP](https://github.com/immunIT/XIP) can do a lot more transformations.
 
-
+{{< rawhtml >}}
 <form name="base">
 <table>
 <tr>
@@ -160,7 +160,7 @@ function evalDotHex(item) {
 }
 evalDot(base.dotd)
 </script>
-
+{{< /rawhtml >}}
 
 __April 2020 Update__: Thought i would quickly update this post since i have been dealing with a few SSRF issues :)
 
