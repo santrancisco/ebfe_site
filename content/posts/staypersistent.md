@@ -1,15 +1,18 @@
 ---
 title: "Role-chaining to stay persistent in AWS environment"
-date: 2020-11-10T17:41:53+10:00
+date: 2022-09-23T17:41:53+10:00
 draft: false
 ---
+
+**[UPDATE]**: With the [recent change in AWS assume role](https://aws.amazon.com/blogs/security/announcing-an-update-to-iam-role-trust-policy-behavior/), the only way this would work is when the role allow itself or allow the entire account to assume into (surprisingly a common mistake). 
 
 Says... you have access to iam or role, administrators are onto you and trying to remove your access by revoking roles, removing iam users you created, etc..  How do you persist? Here is one way to do it...
 
 ## Red team: 
 
-Find a role in current account using `aws iam list-roles
-` with trust relationship set to `arn:aws:iam::{current_accountid}:root` and plug it in the script below. 
+ ~~Find a role with admin privilege and run the following script to assume itself (Allowed by default)~~
+
+(update 2022): Find a role (using `aws iam list-roles`) in current account, add rule that allow the role to assume itself (or if the role has trust relationship set to `arn:aws:iam::{current_accountid}:root` (often happen) - and plug it in the script below. 
 
 ```bash
 while [ 1 ]; \
